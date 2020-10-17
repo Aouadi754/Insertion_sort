@@ -1,0 +1,15 @@
+PROCEDURE insertion_sort(VAR cards : ARRAY_OF INTEGER)
+VAR
+   i,j,current,n : INTEGER;
+BEGIN
+   n := cards.length;
+   FOR i FROM 1 TO n-1 STEP 1  DO
+       current := cards[i];
+       j:=i-1;
+    WHILE ((j>-1) AND (current<cards[j]) ) DO
+   cards[j+1]=cards[j]
+   j:=j-1
+ END_WHILE
+   cards[j+1]=current;
+   END_FOR
+END
